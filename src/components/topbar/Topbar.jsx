@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import {
 	AppBar,
 	Box,
@@ -9,12 +7,14 @@ import {
 	Typography,
 	IconButton,
 } from '@mui/material';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { navItems } from '../../data';
 import MenuIcon from '@mui/icons-material/Menu';
-import NavList from './components/navList';
-import './navbar.scss';
+import Navlist from './components/navlist';
+import './topbar.scss';
 
-const Navbar = ({ window }) => {
+const Topbar = ({ window }) => {
 	const [open, setOpen] = useState(false);
 	const container =
 		window !== undefined ? () => window().document.body : undefined;
@@ -27,7 +27,7 @@ const Navbar = ({ window }) => {
 		<Box sx={{ display: 'flex' }}>
 			<CssBaseline />
 			<AppBar component='nav'>
-				<Toolbar className='navbar' variant='dense'>
+				<Toolbar className='topbar' variant='dense'>
 					<IconButton
 						edge='start'
 						aria-label='menu'
@@ -74,11 +74,11 @@ const Navbar = ({ window }) => {
 						},
 					}}
 				>
-					<NavList onClick={handleToggle} />
+					<Navlist onClick={handleToggle} />
 				</Drawer>
 			</Box>
 		</Box>
 	);
 };
 
-export default Navbar;
+export default Topbar;

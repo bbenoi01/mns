@@ -4,7 +4,7 @@ import {
 	Routes as Switch,
 	Route,
 } from 'react-router-dom';
-import Navbar from './components/navbar';
+import Topbar from './components/topbar';
 import Home from './features/home';
 import ClientView from './features/clients';
 import CandidateView from './features/candidates';
@@ -13,7 +13,7 @@ import './app.scss';
 function App() {
 	return (
 		<Router>
-			<Navbar />
+			<Topbar />
 			<Switch>
 				<Route path='/' element={<Home />} />
 				<Route path='/clients' element={<ClientView />} />

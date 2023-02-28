@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import {
 	Box,
 	Divider,
@@ -8,10 +7,11 @@ import {
 	ListItemText,
 	Typography,
 } from '@mui/material';
+import { Link } from 'react-router-dom';
 import { navItems } from '../../../../data';
-import './navList.scss';
+import './navlist.scss';
 
-const NavList = ({ onClick }) => {
+const Navlist = ({ onClick }) => {
 	return (
 		<Box sx={{ textAlign: 'center' }} onClick={onClick}>
 			<Link className='link' id='brand-link' to='/'>
@@ -40,4 +40,4 @@ const NavList = ({ onClick }) => {
 	);
 };
 
-export default NavList;
+export default Navlist;
