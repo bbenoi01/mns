@@ -30,16 +30,40 @@
 	}
 }
 
-#about {
+#rates {
 	background-color: #fef6e4;
+
+	.pricing-row {
+		justify-content: space-around;
+
+		.pricing {
+			background-color: #001858;
+
+			.headline {
+				color: #fffffe;
+			}
+
+			.paragraph {
+				color: #fef6e4;
+			}
+
+			.highlight {
+				color: #f582ae;
+			}
+		}
+	}
+}
+
+#about {
+	background-color: #fffffe;
 
 	.vitals {
 		justify-content: space-around;
 		align-items: center;
 		margin: 1rem 0;
-		background-color: #001858;
+		background-color: #f3d2c1;
 		padding: 30px 0;
-		color: #fef6e4;
+		color: #172c66;
 		border-radius: 30px;
 	}
 

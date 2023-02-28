@@ -1,5 +1,5 @@
 import React from 'react';
-import { Avatar } from '@mui/material';
+import { Avatar, Card, CardContent } from '@mui/material';
 import Hero from './components/hero';
 import './home.scss';
 
@@ -36,6 +36,26 @@ const Home = () => {
 					struggling to hit some of their major milestones, we can help.
 				</p>
 			</section>
+			<section id='rates'>
+				<p>Rates</p>
+				<div className='row pricing-row'>
+					<Card className='pricing'>
+						<CardContent>
+							<h6>Pricing</h6>
+						</CardContent>
+					</Card>
+					<Card className='pricing'>
+						<CardContent>
+							<h6>Pricing</h6>
+						</CardContent>
+					</Card>
+				</div>
+				{/* <p>
+					Rates: Full time/Part time placement: $3,000.00 ($1,000.00 deposit and
+					remainder ($2,000.00) to be paid in full within 48 hours of placement.
+					Special needs: $4,000.00. Same breakdown (1k/3k).{' '}
+				</p> */}
+			</section>
 			<section id='about'>
 				<p>About Me</p>
 				<div className='row vitals'>
@@ -45,9 +65,11 @@ const Home = () => {
 						sx={{ width: 80, height: 80 }}
 					/>
 					<div>
-						<p>Kristen Lopez</p>
-						<p>858-227-8969</p>
-						<p>kl@someshit.com</p>
+						<p>Kristin Rogers</p>
+						<p>619-540-9227</p>
+						<p style={{ fontSize: '.75rem' }}>
+							kristin@matchmakingnannyservices.com
+						</p>
 					</div>
 				</div>
 				<div className='list'>

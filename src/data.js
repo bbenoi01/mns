@@ -1,19 +1,22 @@
+import SentimentSatisfiedAltIcon from '@mui/icons-material/SentimentSatisfiedAlt';
+import Face3Icon from '@mui/icons-material/Face3';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 
 export const navItems = [
 	{
 		id: 1,
 		label: 'Client',
-		icon: <AlternateEmailIcon />,
+		icon: <SentimentSatisfiedAltIcon />,
 		location: '/clients',
 	},
 	{
 		id: 2,
 		label: 'Candidate',
-		icon: <AlternateEmailIcon />,
+		icon: <Face3Icon />,
 		location: '/candidates',
 	},
-	{ id: 3, label: 'Rates', icon: <AlternateEmailIcon />, location: '/rates' },
+	{ id: 3, label: 'Rates', icon: <AttachMoneyIcon />, location: '/rates' },
 	{
 		id: 4,
 		label: 'Contact Us',
