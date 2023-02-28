@@ -1,0 +1,18 @@
+.canvas {
+	margin-top: 48px;
+	border: 3px solid green;
+	height: calc(100vh - 48px);
+}
+
+.link {
+	text-decoration: none;
+
+	&.visitor-type {
+		margin: 0 1rem;
+		color: whitesmoke;
+	}
+}
+
+#brand-link {
+	margin: 1rem 0;
+}
