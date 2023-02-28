@@ -1,0 +1,56 @@
+#who {
+	background-color: #fef6e4;
+	padding: 20px;
+
+	p {
+		text-align: center;
+		color: #172c66;
+	}
+}
+
+#what {
+	background-color: #f3d2c1;
+
+	p {
+		text-align: center;
+		color: #001858;
+		font-weight: bold;
+	}
+}
+
+.list {
+	// display: flex;
+	// flex-direction: column;
+	// justify-content: center;
+	margin: 0.5rem 0;
+	margin-left: 2rem;
+
+	li {
+		color: #172c66;
+	}
+}
+
+#about {
+	background-color: #fef6e4;
+
+	.vitals {
+		justify-content: space-around;
+		align-items: center;
+		margin: 1rem 0;
+		background-color: #001858;
+		padding: 30px 0;
+		color: #fef6e4;
+		border-radius: 30px;
+	}
+
+	.tag {
+		text-align: center;
+		color: #001858;
+		font-weight: bold;
+		font-style: italic;
+	}
+}
+
+#contact {
+	background-color: #fffffe;
+}

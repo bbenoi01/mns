@@ -10,7 +10,7 @@ const Hero = () => {
 				<h3>Matchmaking Nanny Services</h3>
 				<h4>Let's make your life easier</h4>
 				<h5>~ I am a ~</h5>
-				<div className='row'>
+				<div>
 					<Link className='link visitor-type' to='/clients'>
 						Client
 					</Link>

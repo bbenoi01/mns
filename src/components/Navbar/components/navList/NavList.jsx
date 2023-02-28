@@ -4,30 +4,36 @@ import {
 	Divider,
 	List,
 	ListItem,
-	ListItemButton,
 	ListItemIcon,
 	ListItemText,
 	Typography,
 } from '@mui/material';
 import { navItems } from '../../../../data';
+import './navList.scss';
 
 const NavList = ({ onClick }) => {
 	return (
 		<Box sx={{ textAlign: 'center' }} onClick={onClick}>
 			<Link className='link' id='brand-link' to='/'>
-				<Typography variant='h6' sx={{ my: 2 }}>
-					MNS
+				<Typography
+					variant='h6'
+					sx={{ my: 1, color: '#001858', fontWeight: 'bold' }}
+				>
+					Matchmaking Nanny Services
 				</Typography>
 			</Link>
 			<Divider />
 			<List>
 				{navItems.map((item) => (
-					<ListItem key={item.id} disablePadding>
-						<ListItemButton>
+					<Link className='link drawer-link' key={item.id} to={item.location}>
+						<ListItem>
 							<ListItemIcon>{item.icon}</ListItemIcon>
-							<ListItemText primary={item.label} />
-						</ListItemButton>
-					</ListItem>
+							<ListItemText
+								primary={item.label}
+								primaryTypographyProps={{ fontWeight: 'bold' }}
+							/>
+						</ListItem>
+					</Link>
 				))}
 			</List>
 		</Box>

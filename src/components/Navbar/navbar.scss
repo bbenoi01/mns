@@ -1,0 +1,21 @@
+.navbar {
+	background-color: #001858;
+
+	.home-link {
+		flex-grow: 1;
+		color: #fef6e4;
+
+		&:hover {
+			color: #f582ae;
+		}
+	}
+
+	.nav-link {
+		margin: 0 0.75rem;
+		color: #fef6e4;
+
+		&:hover {
+			color: #f582ae;
+		}
+	}
+}

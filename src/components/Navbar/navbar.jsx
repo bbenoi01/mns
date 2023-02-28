@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import {
 	AppBar,
 	Box,
@@ -7,7 +8,6 @@ import {
 	Toolbar,
 	Typography,
 	IconButton,
-	Button,
 } from '@mui/material';
 import { navItems } from '../../data';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -27,32 +27,32 @@ const Navbar = ({ window }) => {
 		<Box sx={{ display: 'flex' }}>
 			<CssBaseline />
 			<AppBar component='nav'>
-				<Toolbar variant='dense'>
+				<Toolbar className='navbar' variant='dense'>
 					<IconButton
 						edge='start'
-						color='inherit'
 						aria-label='menu'
-						sx={{ mr: 2, display: { sm: 'none' } }}
+						sx={{ mr: 2, display: { sm: 'none' }, color: '#fef6e4' }}
 						onClick={handleToggle}
 					>
 						<MenuIcon />
 					</IconButton>
-					<Typography
-						variant='h6'
-						component='div'
-						sx={{
-							flexGrow: 1,
-							display: { xs: 'none', sm: 'block' },
-							textAlign: { xs: 'center', sm: 'left' },
-						}}
-					>
-						MNS
-					</Typography>
+					<Link className='link home-link' to='/'>
+						<Typography
+							variant='h6'
+							component='div'
+							sx={{
+								display: { xs: 'none', sm: 'block' },
+								textAlign: { xs: 'center', sm: 'left' },
+							}}
+						>
+							MNS
+						</Typography>
+					</Link>
 					<Box sx={{ display: { xs: 'none', sm: 'block' } }}>
 						{navItems.map((item) => (
-							<Button key={item.id} sx={{ color: '#fff' }}>
+							<Link className='link nav-link' key={item.id} to={item.location}>
 								{item.label}
-							</Button>
+							</Link>
 						))}
 					</Box>
 				</Toolbar>
@@ -66,7 +66,12 @@ const Navbar = ({ window }) => {
 					ModalProps={{ keepMounted: true }}
 					sx={{
 						display: { xs: 'block', sm: 'none' },
-						'& .MuiDrawer-paper': { boxSizing: 'border-box', width: 240 },
+
+						'& .MuiDrawer-paper': {
+							backgroundColor: '#fef6e4',
+							boxSizing: 'border-box',
+							width: 240,
+						},
 					}}
 				>
 					<NavList onClick={handleToggle} />
