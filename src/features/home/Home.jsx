@@ -3,13 +3,21 @@ import {
 	Avatar,
 	Box,
 	Card,
+	CardActions,
 	CardContent,
 	CardHeader,
 	Grid,
 } from '@mui/material';
 import EmailIcon from '@mui/icons-material/Email';
 import CallIcon from '@mui/icons-material/Call';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TwitterIcon from '@mui/icons-material/Twitter';
 import Hero from './components/hero';
+import TextInput from '../../components/textInput';
+import TextArea from '../../components/textArea';
+import Button from '../../components/button';
 import './home.scss';
 
 const Home = () => {
@@ -161,16 +169,16 @@ const Home = () => {
 			<section id='contact'>
 				<p>Contact Us</p>
 
-				<h3>Get In Touch</h3>
+				<h4>Get In Touch</h4>
 
-				<p>Do you have questions?</p>
+				<h3>Do you have questions?</h3>
 
 				<p>
 					I am always happy to give you more information about our services, or
 					address any concerns
 				</p>
 
-				<div className='row'>
+				<div className='row' style={{ alignSelf: 'center' }}>
 					<EmailIcon className='icon' />
 					<Link
 						className='link email-link sub-headline'
@@ -179,10 +187,33 @@ const Home = () => {
 						kristen@matchmakingnannyservices.com
 					</Link>
 				</div>
-				<div className='row'>
+				<div className='row' style={{ alignSelf: 'center' }}>
 					<CallIcon className='icon' />
 					<h4 className='sub-headline'>619-540-9227</h4>
 				</div>
+				<div className='row' style={{ alignSelf: 'center' }}>
+					<FacebookIcon />
+					<LinkedInIcon />
+					<InstagramIcon />
+					<TwitterIcon />
+				</div>
+				<Card>
+					<CardHeader
+						title='Drop Us Line'
+						titleTypographyProps={{ align: 'center' }}
+						subheader="Please give us a call, send us an email, or fill out the contact form and we'll get back to you."
+						subheaderTypographyProps={{ align: 'center' }}
+					/>
+					<CardContent>
+						<TextInput type='text' placeholder='Full Name' />
+						<TextInput type='email' placeholder='Email' />
+						<TextInput type='tel' placeholder='Phone Number' />
+						<TextArea placeholder='Message' />
+					</CardContent>
+					<CardActions>
+						<Button label='Send Message' />
+					</CardActions>
+				</Card>
 			</section>
 			<footer>
 				<p>Some footer shit</p>
