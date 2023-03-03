@@ -62,7 +62,7 @@ const Home = () => {
 					alignItems='flex-end'
 				>
 					<Grid item xs={12} sm={6} md={4}>
-						<Card className='price-card'>
+						<Card className='card'>
 							<CardHeader
 								title='Full time/Part time Placement'
 								titleTypographyProps={{
@@ -93,7 +93,7 @@ const Home = () => {
 						</Card>
 					</Grid>
 					<Grid item xs={12} sm={6} md={4}>
-						<Card className='price-card'>
+						<Card className='card'>
 							<CardHeader
 								title='Special Needs'
 								titleTypographyProps={{
@@ -131,8 +131,8 @@ const Home = () => {
 					justifyContent='center'
 					alignItems='flex-end'
 				>
-					<Grid item xs={12}>
-						<Card className='about-card'>
+					<Grid item xs={12} sm={8} md={6}>
+						<Card className='card about-card'>
 							<CardContent className='vitals'>
 								<Avatar
 									className='avatar'
@@ -167,13 +167,11 @@ const Home = () => {
 				</p>
 			</section>
 			<section id='contact'>
-				<p>Contact Us</p>
+				<h4 style={{ textAlign: 'center' }}>Get In Touch</h4>
 
-				<h4>Get In Touch</h4>
+				<h3 style={{ textAlign: 'center' }}>Do you have questions?</h3>
 
-				<h3>Do you have questions?</h3>
-
-				<p>
+				<p style={{ textAlign: 'center' }}>
 					I am always happy to give you more information about our services, or
 					address any concerns
 				</p>
@@ -197,23 +195,41 @@ const Home = () => {
 					<InstagramIcon />
 					<TwitterIcon />
 				</div>
-				<Card>
-					<CardHeader
-						title='Drop Us Line'
-						titleTypographyProps={{ align: 'center' }}
-						subheader="Please give us a call, send us an email, or fill out the contact form and we'll get back to you."
-						subheaderTypographyProps={{ align: 'center' }}
-					/>
-					<CardContent>
-						<TextInput type='text' placeholder='Full Name' />
-						<TextInput type='email' placeholder='Email' />
-						<TextInput type='tel' placeholder='Phone Number' />
-						<TextArea placeholder='Message' />
-					</CardContent>
-					<CardActions>
-						<Button label='Send Message' />
-					</CardActions>
-				</Card>
+				<Grid
+					container
+					spacing={5}
+					justifyContent='center'
+					alignItems='flex-end'
+				>
+					<Grid item xs={12} sm={8} md={6}>
+						<Card className='card'>
+							<CardHeader
+								title='Drop Us Line'
+								titleTypographyProps={{
+									align: 'center',
+									color: '#fffffe',
+									fontFamily: 'Josefin Slab serif',
+								}}
+								subheader="Please give us a call, send us an email, or fill out the contact form and we'll get back to you."
+								subheaderTypographyProps={{
+									align: 'center',
+									color: '#f1f1f1',
+									fontFamily: 'Questrial sans-serif',
+								}}
+								sx={{ backgroundColor: '#001858' }}
+							/>
+							<CardContent>
+								<TextInput type='text' placeholder='Full Name' />
+								<TextInput type='email' placeholder='Email' />
+								<TextInput type='tel' placeholder='Phone Number' />
+								<TextArea placeholder='Message' />
+							</CardContent>
+							<CardActions>
+								<Button label='Send Message' />
+							</CardActions>
+						</Card>
+					</Grid>
+				</Grid>
 			</section>
 			<footer>
 				<p>Some footer shit</p>

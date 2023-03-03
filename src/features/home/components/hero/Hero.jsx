@@ -7,7 +7,7 @@ const Hero = () => {
 		<>
 			<div id='home-hero'></div>
 			<div className='hero-text'>
-				<h3>Let's make your life easier</h3>
+				<h3>Inspiring new love connections.</h3>
 				<h5>~ I am a ~</h5>
 				<div>
 					<Link className='link visitor-type' to='/clients'>
