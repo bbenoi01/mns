@@ -1,3 +1,4 @@
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import {
 	Avatar,
@@ -8,6 +9,13 @@ import {
 	CardHeader,
 	Grid,
 } from '@mui/material';
+import {
+	setName,
+	setEmail,
+	setPhone,
+	setMessage,
+	sendEmail,
+} from '../../redux/slices/contactSlice';
 import EmailIcon from '@mui/icons-material/Email';
 import CallIcon from '@mui/icons-material/Call';
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -21,6 +29,50 @@ import Button from '../../components/button';
 import './home.scss';
 
 const Home = () => {
+	const { name, email, phone, message, success, errors } = useSelector(
+		(state) => state.contact
+	);
+	const dispatch = useDispatch();
+
+	const handleChange = (input, value) => {
+		switch (input) {
+			case 'name':
+				dispatch(setName(value));
+				break;
+
+			case 'email':
+				dispatch(setEmail(value));
+				break;
+
+			case 'phone':
+				dispatch(setPhone(value));
+				break;
+
+			case 'message':
+				dispatch(setMessage(value));
+				break;
+
+			default:
+				break;
+		}
+	};
+
+	const handleSubmit = (e) => {
+		const messageData = {
+			name,
+			email,
+			phone,
+			message,
+		};
+
+		const data = {
+			to: email,
+			messageData,
+		};
+		e.preventDefault();
+		dispatch(sendEmail(data));
+	};
+
 	return (
 		<div className='canvas'>
 			<Hero />
@@ -218,15 +270,36 @@ const Home = () => {
 								}}
 								sx={{ backgroundColor: '#001858' }}
 							/>
-							<CardContent>
-								<TextInput type='text' placeholder='Full Name' />
-								<TextInput type='email' placeholder='Email' />
-								<TextInput type='tel' placeholder='Phone Number' />
-								<TextArea placeholder='Message' />
-							</CardContent>
-							<CardActions>
-								<Button label='Send Message' />
-							</CardActions>
+							<form onSubmit={handleSubmit}>
+								<CardContent>
+									<TextInput
+										type='text'
+										placeholder='Full Name'
+										value={name}
+										onChange={(e) => handleChange('name', e.target.value)}
+									/>
+									<TextInput
+										type='email'
+										placeholder='Email'
+										value={email}
+										onChange={(e) => handleChange('email', e.target.value)}
+									/>
+									<TextInput
+										type='tel'
+										placeholder='Phone Number'
+										value={phone}
+										onChange={(e) => handleChange('phone', e.target.value)}
+									/>
+									<TextArea
+										placeholder='Message'
+										value={message}
+										onChange={(e) => handleChange('message', e.target.value)}
+									/>
+								</CardContent>
+								<CardActions>
+									<Button type='submit' label='Send Message' />
+								</CardActions>
+							</form>
 						</Card>
 					</Grid>
 				</Grid>

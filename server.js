@@ -1,21 +1,13 @@
 const express = require('express');
+const dotenv = require('dotenv');
+const sgMail = require('@sendgrid/mail');
 const favicon = require('express-favicon');
 const path = require('path');
-const dotenv = require('dotenv');
-dotenv.config();
-const sgMail = require('@sendgrid/mail');
 const port = process.env.PORT || 8080;
 const app = express();
 
+dotenv.config();
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-
-const msg = {
-	to: 'b.nutty@gmail.com', // Change to your recipient
-	from: 'kristin@matchmakingnannyservices.com', // Change to your verified sender
-	subject: 'Sending with SendGrid is Fun',
-	text: 'and easy to do anywhere, even with Node.js',
-	html: '<strong>and easy to do anywhere, even with Node.js</strong>',
-};
 
 app.use(favicon(__dirname + '/build/favicon.ico'));
 app.use(express.static(__dirname));
@@ -29,13 +21,35 @@ app.get('/*', (req, res) => {
 	res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-sgMail
-	.send(msg)
-	.then(() => {
-		console.log('Email sent');
-	})
-	.catch((error) => {
-		console.error(error);
-	});
+app.post('/email', async (req, res) => {
+	const { to, messageData } = req?.body;
+	let errors = {};
+
+	try {
+		const msg = {
+			to: 'kristin@matchmakingnannyservices.com', // Change to your recipient
+			from: 'support@matchmakingnannyservices.com', // Change to your verified sender
+			subject: 'New Question From MNS',
+			// text: messageData.message,
+			html: `<strong>${messageData.messege}</strong>`,
+		};
+
+		const conformation = {
+			to, // Change to your recipient
+			from: 'support@matchmakingnannyservices.com', // Change to your verified sender
+			subject: 'Thank You!',
+			text: 'Thank you for your interest in our services. We have received you email, and will contact you within 48 hours.',
+			// html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+		};
+
+		await sgMail.send(msg);
+		await sgMail.send(conformation);
+
+		res.json({ messege: 'Email sent successfully!' });
+	} catch (err) {
+		errors.email = 'Error sending email';
+		return res.status(400).json(errors);
+	}
+});
 
 app.listen(port);
