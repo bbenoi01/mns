@@ -10,6 +10,7 @@ dotenv.config();
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 app.use(favicon(__dirname + '/build/favicon.ico'));
+app.use(express.json());
 app.use(express.static(__dirname));
 app.use(express.static(path.join(__dirname, 'build')));
 
@@ -23,23 +24,22 @@ app.get('/*', (req, res) => {
 
 app.post('/email', async (req, res) => {
 	const { to, messageData } = req?.body;
+	const { name, email, phone, message } = messageData;
 	let errors = {};
 
 	try {
 		const msg = {
-			to: 'kristin@matchmakingnannyservices.com', // Change to your recipient
-			from: 'support@matchmakingnannyservices.com', // Change to your verified sender
+			to: 'kristin@matchmakingnannyservices.com',
+			from: 'support@matchmakingnannyservices.com',
 			subject: 'New Question From MNS',
-			// text: messageData.message,
-			html: `<strong>${messageData.messege}</strong>`,
+			html: `<h3>Hello, Kristin!</h3> <h4>You have a new message...</h4> <p>Name: ${name}</p> <p>Email: ${email}</p> <p>Phone Number: ${phone}</p> <p>Message: ${message}</p>`,
 		};
 
 		const conformation = {
-			to, // Change to your recipient
-			from: 'support@matchmakingnannyservices.com', // Change to your verified sender
+			to,
+			from: 'support@matchmakingnannyservices.com',
 			subject: 'Thank You!',
 			text: 'Thank you for your interest in our services. We have received you email, and will contact you within 48 hours.',
-			// html: '<strong>and easy to do anywhere, even with Node.js</strong>',
 		};
 
 		await sgMail.send(msg);
@@ -52,4 +52,6 @@ app.post('/email', async (req, res) => {
 	}
 });
 
-app.listen(port);
+app.listen(port, () => {
+	console.log(`Listening on port ${port}`);
+});
