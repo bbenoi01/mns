@@ -5,10 +5,10 @@
 
 .canvas {
 	margin-top: 48px;
-	// border: 3px solid green;
 	height: calc(100vh - 48px);
 
-	section {
+	section,
+	footer {
 		padding: 20px;
 		min-height: calc((100vh - 48px) / 3);
 		display: flex;

@@ -4,6 +4,7 @@ import What from './components/what';
 // import Rates from './components/rates';
 import About from './components/about';
 import Contact from './components/contact';
+import Footer from './components/footer';
 import './home.scss';
 
 const Home = () => {
@@ -15,9 +16,7 @@ const Home = () => {
 			{/* <Rates /> */}
 			<About />
 			<Contact />
-			<footer>
-				<p>Some footer shit</p>
-			</footer>
+			<Footer />
 		</div>
 	);
 };
