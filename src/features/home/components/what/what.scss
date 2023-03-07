@@ -1,0 +1,35 @@
+#what {
+	background-color: #f3d2c1;
+	justify-content: center;
+	align-items: center;
+
+	p {
+		text-align: center;
+		font-weight: bold;
+
+		&.header {
+			font-family: 'Petit Formal Script', cursive;
+			font-size: 35px;
+		}
+
+		&.closer {
+			font-family: 'Questrial', sans-serif;
+			font-size: 18px;
+		}
+	}
+
+	li {
+		font-family: 'Questrial', sans-serif;
+	}
+}
+
+@media only screen and (min-width: 500px) {
+}
+@media only screen and (min-width: 600px) {
+}
+@media only screen and (min-width: 900px) {
+}
+@media only screen and (min-width: 1200px) {
+}
+@media only screen and (min-width: 1536px) {
+}

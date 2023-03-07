@@ -1,18 +1,12 @@
-.list {
-	// display: flex;
-	// flex-direction: column;
-	// justify-content: center;
-	margin: 0.5rem 0;
-	margin-left: 2rem;
+#who {
+	background-color: #fef6e4;
+	justify-content: center;
 
-	li {
+	p {
+		text-align: center;
 		color: #172c66;
-	}
-}
-
-.email-link {
-	&:hover {
-		color: #f582ae;
+		font-family: 'Questrial', sans-serif;
+		font-size: 18px;
 	}
 }
 

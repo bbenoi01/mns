@@ -60,6 +60,10 @@ export const contactSlice = createSlice({
 			.addCase(sendEmail.fulfilled, (state, action) => {
 				state.loading = false;
 				state.success = action.payload;
+				state.name = '';
+				state.email = '';
+				state.phone = '';
+				state.message = '';
 			})
 			.addCase(sendEmail.rejected, (state, action) => {
 				state.loading = false;

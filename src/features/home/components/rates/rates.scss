@@ -1,0 +1,44 @@
+#rates {
+	background-color: #fef6e4;
+	justify-content: center;
+	align-items: center;
+
+	.price-card {
+		.fine-print {
+			text-align: center;
+			font-family: 'Questrial', sans-serif;
+			color: #172c66;
+		}
+	}
+
+	.pricing-row {
+		justify-content: space-around;
+
+		.pricing {
+			background-color: #001858;
+
+			.headline {
+				color: #fffffe;
+			}
+
+			.paragraph {
+				color: #fef6e4;
+			}
+
+			.highlight {
+				color: #f582ae;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 500px) {
+}
+@media only screen and (min-width: 600px) {
+}
+@media only screen and (min-width: 900px) {
+}
+@media only screen and (min-width: 1200px) {
+}
+@media only screen and (min-width: 1536px) {
+}

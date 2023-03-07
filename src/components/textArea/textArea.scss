@@ -1,5 +1,17 @@
 .text-area {
 	width: 100%;
 	border-radius: 10px;
-	padding: 5px;
+	padding: 10px;
+	background-color: #fef6e4;
+	color: #001858;
+
+	&::placeholder {
+		color: #001858;
+		font-weight: bold;
+	}
+
+	&::-ms-input-placeholder {
+		color: #001858;
+		font-weight: bold;
+	}
 }

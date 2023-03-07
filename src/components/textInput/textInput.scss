@@ -4,4 +4,16 @@
 	padding: 5px;
 	text-align: center;
 	margin-bottom: 20px;
+	background-color: #fef6e4;
+	color: #001858;
+
+	&::placeholder {
+		color: #001858;
+		font-weight: bold;
+	}
+
+	&::-ms-input-placeholder {
+		color: #001858;
+		font-weight: bold;
+	}
 }
