@@ -1,6 +1,13 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { Card, CardContent, CardHeader, Grid } from '@mui/material';
+import {
+	Card,
+	CardContent,
+	CardHeader,
+	Grid,
+	IconButton,
+	Tooltip,
+} from '@mui/material';
 import {
 	setName,
 	setEmail,
@@ -85,11 +92,15 @@ const Contact = () => {
 				<h4 className='sub-headline'>619-540-9227</h4>
 			</div>
 			<div className='row icon-row'>
-				<InstagramIcon className='social' />
+				<Tooltip title='Instagram' placement='right-start'>
+					<IconButton>
+						<InstagramIcon className='social' />
+					</IconButton>
+				</Tooltip>
 			</div>
 			<Grid container spacing={5} justifyContent='center' alignItems='flex-end'>
 				<Grid item xs={12} sm={8} md={6}>
-					<Card className='card'>
+					<Card className='card contact-card'>
 						<CardHeader
 							title='Drop Us Line'
 							titleTypographyProps={{

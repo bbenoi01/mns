@@ -1,23 +1,27 @@
 #about {
-	background-color: #fffffe;
+	background-color: #fef6e4;
+	justify-content: center;
 	align-items: center;
 
-	.about-card {
-		background-color: #f3d2c1;
+	.section-header {
+		text-align: center;
+		font-family: 'Josefin Slab', serif;
 	}
 
-	.vitals {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-		color: #172c66;
-		// border: 2px solid red;
+	.divider {
+		border-bottom: 2px solid #001858;
+		width: 40%;
+		margin: 10px 0;
+		align-self: center;
+	}
 
-		.avatar {
-			width: 100px;
-			height: 100px;
-		}
+	.avatar {
+		width: 125px;
+		height: 125px;
+	}
+
+	.name {
+		font-family: 'Petit Formal Script', cursive;
 	}
 
 	li {
@@ -35,21 +39,22 @@
 }
 
 @media only screen and (min-width: 500px) {
-	#about {
-		.vitals {
-			flex-direction: row;
-			justify-content: center;
-			align-items: center;
-
-			.avatar {
-				width: 125px;
-				height: 125px;
-				margin-right: 5px;
-			}
-		}
-	}
 }
 @media only screen and (min-width: 600px) {
+	#about {
+		.section-header {
+			align-self: flex-start;
+		}
+
+		.divider {
+			align-self: flex-start;
+		}
+
+		.avatar {
+			width: 150px;
+			height: 150px;
+		}
+	}
 }
 @media only screen and (min-width: 900px) {
 }

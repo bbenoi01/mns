@@ -4,7 +4,9 @@ import './what.scss';
 const What = () => {
 	return (
 		<section id='what'>
-			<p className='headline header'>Placement/Services Include</p>
+			<h4 className='headline section-header'>Services</h4>
+			<div className='divider' />
+			<p className='headline header'>Placement Services Include:</p>
 			<div className='list'>
 				<ul>
 					<li>In home consultation by the CEO</li>
@@ -22,7 +24,7 @@ const What = () => {
 			</div>
 			<p className='headline closer'>
 				Whether your child is flourishing, and you have no concerns, or
-				struggling to hit some of their major milestones, we can help.
+				struggling to hit some of their major milestones, we can help!
 			</p>
 		</section>
 	);

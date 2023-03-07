@@ -1,7 +1,7 @@
 import Hero from './components/hero';
 import Who from './components/who';
 import What from './components/what';
-import Rates from './components/rates';
+// import Rates from './components/rates';
 import About from './components/about';
 import Contact from './components/contact';
 import './home.scss';
@@ -12,7 +12,7 @@ const Home = () => {
 			<Hero />
 			<Who />
 			<What />
-			<Rates />
+			{/* <Rates /> */}
 			<About />
 			<Contact />
 			<footer>
