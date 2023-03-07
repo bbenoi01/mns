@@ -24,7 +24,7 @@ import Button from '../../../../components/button';
 import './contact.scss';
 
 const Contact = () => {
-	const { name, email, phone, message, success, errors } = useSelector(
+	const { loading, name, email, phone, message, success, errors } = useSelector(
 		(state) => state.contact
 	);
 	const dispatch = useDispatch();
@@ -93,7 +93,11 @@ const Contact = () => {
 			</div>
 			<div className='row icon-row'>
 				<Tooltip title='Instagram' placement='right-start'>
-					<IconButton>
+					<IconButton
+						href='https://instagram.com/matchmakingnannyservices/'
+						target='_blank'
+						referrerPolicy='no-referrer'
+					>
 						<InstagramIcon className='social' />
 					</IconButton>
 				</Tooltip>
