@@ -1,4 +1,4 @@
-#clients {
+#candidates {
 	background-color: #f3d2c1;
 	justify-content: center;
 	align-items: center;
@@ -18,29 +18,19 @@
 	p {
 		text-align: center;
 		font-weight: bold;
+		font-family: 'Questrial', sans-serif;
 
 		&.header {
-			font-family: 'Petit Formal Script', cursive;
-			font-size: 25px;
+			font-size: 20px;
 		}
 
 		&.closer {
-			font-family: 'Questrial', sans-serif;
 			font-size: 18px;
-			font-style: italic;
 		}
 	}
 
 	li {
 		font-family: 'Questrial', sans-serif;
-	}
-
-	.price-card {
-		.fine-print {
-			text-align: center;
-			font-family: 'Questrial', sans-serif;
-			color: #172c66;
-		}
 	}
 }
 

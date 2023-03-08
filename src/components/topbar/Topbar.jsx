@@ -45,7 +45,7 @@ const Topbar = ({ window }) => {
 								textAlign: { xs: 'center', sm: 'left' },
 							}}
 						>
-							Matchmaking Nanny Services
+							<span>M</span>atchmaking <span>N</span>anny <span>S</span>ervices
 						</Typography>
 					</Link>
 					<Box sx={{ display: { xs: 'none', sm: 'block' } }}>

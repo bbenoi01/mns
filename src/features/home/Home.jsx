@@ -1,8 +1,8 @@
 import Hero from './components/hero';
 import Who from './components/who';
 import What from './components/what';
-// import Rates from './components/rates';
 import About from './components/about';
+import Candidates from './components/candidates';
 import Contact from './components/contact';
 import Footer from '../../components/footer';
 import './home.scss';
@@ -13,8 +13,8 @@ const Home = () => {
 			<Hero />
 			<Who />
 			<What />
-			{/* <Rates /> */}
 			<About />
+			<Candidates />
 			<Contact />
 			<Footer />
 		</div>

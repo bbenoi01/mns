@@ -7,7 +7,7 @@ export const navItems = [
 		id: 1,
 		label: 'Client',
 		icon: <SentimentSatisfiedAltIcon />,
-		location: '#what',
+		location: '#clients',
 	},
 	{
 		id: 2,

@@ -3,7 +3,7 @@ import './what.scss';
 
 const What = () => {
 	return (
-		<section id='what'>
+		<section id='clients'>
 			<h4 className='headline section-header'>Services</h4>
 			<div className='divider' />
 			<p className='headline header'>Placement Services Include:</p>
@@ -30,13 +30,14 @@ const What = () => {
 
 			<Grid container spacing={5} justifyContent='center' alignItems='flex-end'>
 				<Grid item xs={12} sm={6} md={4}>
-					<Card className='card'>
+					<Card className='card price-card'>
 						<CardHeader
 							title='Full time/Part time Placement'
 							titleTypographyProps={{
 								align: 'center',
 								color: '#fffffe',
 								fontFamily: 'Josefin Slab serif',
+								fontSize: '19px',
 							}}
 							sx={{
 								backgroundColor: '#001858',
@@ -61,13 +62,14 @@ const What = () => {
 					</Card>
 				</Grid>
 				<Grid item xs={12} sm={6} md={4}>
-					<Card className='card'>
+					<Card className='card price-card'>
 						<CardHeader
 							title='Special Needs'
 							titleTypographyProps={{
 								align: 'center',
 								color: '#fffffe',
 								fontFamily: 'Josefin Slab serif',
+								fontSize: '19px',
 							}}
 							sx={{ backgroundColor: '#001858' }}
 						/>
