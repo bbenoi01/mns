@@ -1,3 +1,3 @@
-import Contact from './Contact';
+import ContactView from './ContactView';
 
-export default Contact;
+export default ContactView;

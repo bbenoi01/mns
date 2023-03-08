@@ -4,7 +4,6 @@ import './rates.scss';
 const Rates = () => {
 	return (
 		<section id='rates'>
-			<p>Rates</p>
 			<Grid container spacing={5} justifyContent='center' alignItems='flex-end'>
 				<Grid item xs={12} sm={6} md={4}>
 					<Card className='card'>

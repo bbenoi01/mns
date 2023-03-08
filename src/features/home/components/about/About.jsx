@@ -6,7 +6,7 @@ const About = () => {
 		<section id='about'>
 			<h4 className='headline section-header'>About Me</h4>
 			<div className='divider' />
-			<div>
+			<div className='vitals'>
 				<Avatar className='avatar' alt="CEO's Picture" src='kristin.jpg' />
 				<h3 className='headline name'>Kristin Rogers</h3>
 			</div>

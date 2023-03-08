@@ -1,0 +1,32 @@
+import React from 'react';
+import './what.scss';
+
+const What = () => {
+	return (
+		<section id='what'>
+			<p className='headline header'>Placement Services Include:</p>
+			<div className='list'>
+				<ul>
+					<li>In home consultation by the CEO</li>
+					<li>
+						A vast selection of candidates that suit your families’ specific
+						needs{' '}
+					</li>
+					<li>Salary negotiations</li>
+				</ul>
+				<ul>
+					<li>Options for payroll/W-2/contract agreements</li>
+					<li>Reference checks</li>
+					<li>Through background check on selected nanny</li>
+					<li>Access to staff after hours and on weekends</li>
+				</ul>
+			</div>
+			<p className='headline closer'>
+				Whether your child is flourishing, and you have no concerns, or
+				struggling to hit some of their major milestones, we can help!
+			</p>
+		</section>
+	);
+};
+
+export default What;

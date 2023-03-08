@@ -4,7 +4,7 @@ import What from './components/what';
 // import Rates from './components/rates';
 import About from './components/about';
 import Contact from './components/contact';
-import Footer from './components/footer';
+import Footer from '../../components/footer';
 import './home.scss';
 
 const Home = () => {
