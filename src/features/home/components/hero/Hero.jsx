@@ -1,5 +1,3 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 import './hero.scss';
 
 const Hero = () => {
@@ -10,12 +8,12 @@ const Hero = () => {
 				<h3>Inspiring new love connections.</h3>
 				<h5>~ I am a ~</h5>
 				<div>
-					<Link className='link visitor-type' to='/clients'>
+					<a className='link visitor-type' href='#what'>
 						Client
-					</Link>
-					<Link className='link visitor-type' to='/candidates'>
+					</a>
+					<a className='link visitor-type' href='#candidates'>
 						Candidate
-					</Link>
+					</a>
 				</div>
 			</div>
 		</>

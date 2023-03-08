@@ -45,7 +45,7 @@ app.post('/email', async (req, res) => {
 		await sgMail.send(msg);
 		await sgMail.send(conformation);
 
-		res.json({ messege: 'Email sent successfully!' });
+		res.json({ message: 'Email sent successfully!' });
 	} catch (err) {
 		errors.email = 'Error sending email';
 		return res.status(400).json(errors);

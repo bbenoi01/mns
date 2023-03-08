@@ -45,14 +45,14 @@ const Topbar = ({ window }) => {
 								textAlign: { xs: 'center', sm: 'left' },
 							}}
 						>
-							MNS
+							Matchmaking Nanny Services
 						</Typography>
 					</Link>
 					<Box sx={{ display: { xs: 'none', sm: 'block' } }}>
 						{navItems.map((item) => (
-							<Link className='link nav-link' key={item.id} to={item.location}>
+							<a className='link nav-link' key={item.id} href={item.location}>
 								{item.label}
-							</Link>
+							</a>
 						))}
 					</Box>
 				</Toolbar>

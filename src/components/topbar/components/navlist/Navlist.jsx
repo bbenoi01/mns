@@ -25,7 +25,7 @@ const Navlist = ({ onClick }) => {
 			<Divider />
 			<List>
 				{navItems.map((item) => (
-					<Link className='link drawer-link' key={item.id} to={item.location}>
+					<a className='link drawer-link' key={item.id} href={item.location}>
 						<ListItem>
 							<ListItemIcon>{item.icon}</ListItemIcon>
 							<ListItemText
@@ -33,7 +33,7 @@ const Navlist = ({ onClick }) => {
 								primaryTypographyProps={{ fontWeight: 'bold' }}
 							/>
 						</ListItem>
-					</Link>
+					</a>
 				))}
 			</List>
 		</Box>
