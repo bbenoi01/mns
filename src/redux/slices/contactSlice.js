@@ -44,11 +44,20 @@ export const contactSlice = createSlice({
 		setMessage: (state, action) => {
 			state.message = action.payload;
 		},
+		setErrors: (state, action) => {
+			state.errors = action.payload;
+		},
 		clearForm: (state) => {
 			state.name = '';
 			state.email = '';
 			state.phone = '';
 			state.message = '';
+		},
+		clearSuccess: (state) => {
+			state.success = null;
+		},
+		clearErrors: (state) => {
+			state.errors = null;
 		},
 	},
 	extraReducers: (builder) => {
@@ -72,7 +81,15 @@ export const contactSlice = createSlice({
 	},
 });
 
-export const { setName, setEmail, setPhone, setMessage, clearForm } =
-	contactSlice.actions;
+export const {
+	setName,
+	setEmail,
+	setPhone,
+	setMessage,
+	setErrors,
+	clearForm,
+	clearSuccess,
+	clearErrors,
+} = contactSlice.actions;
 
 export default contactSlice.reducer;

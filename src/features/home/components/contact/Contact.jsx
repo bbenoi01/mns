@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import {
@@ -14,7 +15,11 @@ import {
 	setPhone,
 	setMessage,
 	sendEmail,
+	setErrors,
+	clearSuccess,
+	clearErrors,
 } from '../../../../redux/slices/contactSlice';
+import { validateForm } from '../../../../util/validators';
 import EmailIcon from '@mui/icons-material/Email';
 import CallIcon from '@mui/icons-material/Call';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -52,7 +57,12 @@ const Contact = () => {
 		}
 	};
 
+	const handleFocus = () => {
+		dispatch(clearErrors());
+	};
+
 	const handleSubmit = (e) => {
+		e.preventDefault();
 		const messageData = {
 			name,
 			email,
@@ -64,9 +74,22 @@ const Contact = () => {
 			to: email,
 			messageData,
 		};
-		e.preventDefault();
-		dispatch(sendEmail(data));
+		const { valid, errors } = validateForm(messageData);
+
+		if (!valid) {
+			dispatch(setErrors(errors));
+		} else {
+			dispatch(sendEmail(data));
+		}
 	};
+
+	useEffect(() => {
+		if (success) {
+			setTimeout(() => {
+				dispatch(clearSuccess());
+			}, 5000);
+		}
+	}, [dispatch, success]);
 
 	return (
 		<section id='contact'>
@@ -128,31 +151,44 @@ const Contact = () => {
 									placeholder='Full Name'
 									value={name}
 									onChange={(e) => handleChange('name', e.target.value)}
+									onFocus={handleFocus}
 								/>
+								{errors && errors.name && (
+									<h5 className='helper-txt error'>{errors.name}</h5>
+								)}
 								<TextInput
-									type='email'
+									// type='email'
 									placeholder='Email'
 									value={email}
 									onChange={(e) => handleChange('email', e.target.value)}
+									onFocus={handleFocus}
 								/>
+								{errors && errors.email && (
+									<h5 className='helper-txt error'>{errors.email}</h5>
+								)}
 								<TextInput
 									type='tel'
 									placeholder='Phone Number'
 									value={phone}
 									onChange={(e) => handleChange('phone', e.target.value)}
+									onFocus={handleFocus}
 								/>
+								{errors && errors.phone && (
+									<h5 className='helper-txt error'>{errors.phone}</h5>
+								)}
 								<TextArea
 									placeholder='Message'
 									value={message}
 									onChange={(e) => handleChange('message', e.target.value)}
+									onFocus={handleFocus}
 								/>
 								{success && (
 									<h5 className='helper-txt success'>{success.message}</h5>
 								)}
-								{errors && errors.email && (
-									<h5 className='helper-txt error'>{errors.email}</h5>
+								{errors && errors.message && (
+									<h5 className='helper-txt error'>{errors.message}</h5>
 								)}
-								<Button type='submit' label='Send Message' />
+								<Button type='submit' label='Send Message' loading={loading} />
 							</CardContent>
 						</form>
 					</Card>

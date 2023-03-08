@@ -1,6 +1,6 @@
 import './textInput.scss';
 
-const TextInput = ({ type, placeholder, value, onChange }) => {
+const TextInput = ({ type, placeholder, value, onChange, onFocus }) => {
 	return (
 		<input
 			className='input'
@@ -8,6 +8,7 @@ const TextInput = ({ type, placeholder, value, onChange }) => {
 			placeholder={placeholder}
 			value={value}
 			onChange={onChange}
+			onFocus={onFocus}
 		/>
 	);
 };

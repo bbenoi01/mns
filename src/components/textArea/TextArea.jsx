@@ -1,6 +1,6 @@
 import './textArea.scss';
 
-const TextArea = ({ placeholder, value, onChange }) => {
+const TextArea = ({ placeholder, value, onChange, onFocus }) => {
 	return (
 		<textarea
 			className='text-area'
@@ -8,6 +8,7 @@ const TextArea = ({ placeholder, value, onChange }) => {
 			placeholder={placeholder}
 			value={value}
 			onChange={onChange}
+			onFocus={onFocus}
 		/>
 	);
 };
