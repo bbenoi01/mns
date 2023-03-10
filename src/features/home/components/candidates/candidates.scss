@@ -1,0 +1,60 @@
+#candidates {
+	background-color: #f3d2c1;
+	justify-content: center;
+	align-items: center;
+
+	.section-header {
+		text-align: center;
+		font-family: 'Josefin Slab', serif;
+	}
+
+	.divider {
+		border-bottom: 2px solid #001858;
+		width: 40%;
+		margin: 10px 0;
+		align-self: center;
+	}
+
+	p {
+		text-align: center;
+		font-weight: bold;
+		font-family: 'Questrial', sans-serif;
+
+		&.header {
+			font-size: 20px;
+		}
+
+		&.closer {
+			font-size: 18px;
+		}
+	}
+
+	li {
+		font-family: 'Questrial', sans-serif;
+	}
+}
+
+@media only screen and (min-width: 500px) {
+}
+@media only screen and (min-width: 600px) {
+	// #what {
+	// 	.section-header {
+	// 		align-self: flex-start;
+	// 	}
+
+	// 	.divider {
+	// 		align-self: flex-start;
+	// 	}
+	// }
+}
+@media only screen and (min-width: 900px) {
+	#what {
+		.divider {
+			width: 30%;
+		}
+	}
+}
+@media only screen and (min-width: 1200px) {
+}
+@media only screen and (min-width: 1536px) {
+}

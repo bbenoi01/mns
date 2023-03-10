@@ -1,0 +1,70 @@
+#clients {
+	background-color: #f3d2c1;
+	justify-content: center;
+	align-items: center;
+
+	.section-header {
+		text-align: center;
+		font-family: 'Josefin Slab', serif;
+	}
+
+	.divider {
+		border-bottom: 2px solid #001858;
+		width: 40%;
+		margin: 10px 0;
+		align-self: center;
+	}
+
+	p {
+		text-align: center;
+		font-weight: bold;
+
+		&.header {
+			font-family: 'Petit Formal Script', cursive;
+			font-size: 25px;
+		}
+
+		&.closer {
+			font-family: 'Questrial', sans-serif;
+			font-size: 18px;
+			font-style: italic;
+		}
+	}
+
+	li {
+		font-family: 'Questrial', sans-serif;
+	}
+
+	.price-card {
+		.fine-print {
+			text-align: center;
+			font-family: 'Questrial', sans-serif;
+			color: #172c66;
+		}
+	}
+}
+
+@media only screen and (min-width: 500px) {
+}
+@media only screen and (min-width: 600px) {
+	// #what {
+	// 	.section-header {
+	// 		align-self: flex-start;
+	// 	}
+
+	// 	.divider {
+	// 		align-self: flex-start;
+	// 	}
+	// }
+}
+@media only screen and (min-width: 900px) {
+	#what {
+		.divider {
+			width: 30%;
+		}
+	}
+}
+@media only screen and (min-width: 1200px) {
+}
+@media only screen and (min-width: 1536px) {
+}

@@ -1,0 +1,18 @@
+.input {
+	width: 100%;
+	border-radius: 30px;
+	padding: 5px;
+	text-align: center;
+	margin: 5px 0;
+	color: #001858;
+
+	&::placeholder {
+		color: #001858;
+		font-weight: bold;
+	}
+
+	&::-ms-input-placeholder {
+		color: #001858;
+		font-weight: bold;
+	}
+}

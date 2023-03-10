@@ -1,0 +1,85 @@
+#contact {
+	background-color: #fffffe;
+	justify-content: center;
+	align-items: center;
+
+	.concerns {
+		text-align: center;
+	}
+
+	.section-header {
+		font-family: 'Josefin Slab', serif;
+		font-weight: bolder;
+	}
+
+	.questions {
+		font-family: 'Questrial', sans-serif;
+	}
+
+	.divider {
+		border-bottom: 2px solid #001858;
+		width: 40%;
+		margin: 10px 0;
+		align-self: center;
+	}
+
+	.questions,
+	.concerns {
+		margin-bottom: 10px;
+	}
+
+	.concerns {
+		font-size: 15px;
+		font-style: italic;
+	}
+
+	.contact-row,
+	.icon-row {
+		align-self: center;
+	}
+
+	.contact-row {
+		margin-bottom: 5px;
+	}
+
+	.icon,
+	.social {
+		color: #172c66;
+	}
+
+	.icon {
+		margin-right: 5px;
+	}
+
+	.contact-card {
+		background-color: #f3d2c1;
+	}
+
+	.success {
+		color: green;
+	}
+
+	.error {
+		color: red;
+	}
+}
+
+@media only screen and (min-width: 500px) {
+}
+@media only screen and (min-width: 600px) {
+	// #contact {
+	// 	.section-header {
+	// 		align-self: flex-start;
+	// 	}
+
+	// 	.divider {
+	// 		align-self: flex-start;
+	// 	}
+	// }
+}
+@media only screen and (min-width: 900px) {
+}
+@media only screen and (min-width: 1200px) {
+}
+@media only screen and (min-width: 1536px) {
+}
