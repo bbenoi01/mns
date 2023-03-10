@@ -1,4 +1,21 @@
 #footer {
 	background-color: #001858;
 	color: whitesmoke;
+
+	.social,
+	.copyright,
+	.contact-info {
+		justify-content: center;
+		align-items: center;
+	}
+
+	.social-icon,
+	.privacy {
+		color: whitesmoke;
+	}
+
+	.contact-info,
+	.privacy {
+		align-self: center;
+	}
 }
