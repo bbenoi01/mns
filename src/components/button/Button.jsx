@@ -1,10 +1,10 @@
-import React from 'react';
+import { CircularProgress } from '@mui/material';
 import './button.scss';
 
 const Button = ({ label, onClick, loading }) => {
 	return (
 		<button className='btn' onClick={onClick}>
-			{label}
+			{loading ? <CircularProgress size={20} thickness={5} /> : <>{label}</>}
 		</button>
 	);
 };
