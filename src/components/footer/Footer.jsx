@@ -66,7 +66,11 @@ const Footer = () => {
 			<div className='privacy'>
 				<p className='content'>Information</p>
 				<div className='divider' />
-				<Link className='link email-link sub-headline-alt' to='/privacy'>
+				<Link
+					className='link email-link sub-headline-alt'
+					to='https://www.privacypolicies.com/live/3bf9d52c-aab9-41ce-8e9d-d37093c5c8b0'
+					target='_blank'
+				>
 					Privacy Policy
 				</Link>
 				<div className='row copyright'>
