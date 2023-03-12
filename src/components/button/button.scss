@@ -6,4 +6,8 @@
 	background-color: #f582ae;
 	font-weight: bold;
 	color: #001858;
+
+	&:hover {
+		cursor: pointer;
+	}
 }
