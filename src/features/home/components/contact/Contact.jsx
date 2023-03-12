@@ -23,6 +23,8 @@ import { validateForm } from '../../../../util/validators';
 import EmailIcon from '@mui/icons-material/Email';
 import CallIcon from '@mui/icons-material/Call';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import FacebookIcon from '@mui/icons-material/Facebook';
 import TextInput from '../../../../components/textInput';
 import TextArea from '../../../../components/textArea';
 import Button from '../../../../components/button';
@@ -115,13 +117,31 @@ const Contact = () => {
 				<h4 className='sub-headline'>619-540-9227</h4>
 			</div>
 			<div className='row icon-row'>
-				<Tooltip title='Instagram' placement='right-start'>
+				<Tooltip title='Instagram' placement='left-start'>
 					<IconButton
 						href='https://instagram.com/matchmakingnannyservices/'
 						target='_blank'
 						referrerPolicy='no-referrer'
 					>
 						<InstagramIcon className='social' />
+					</IconButton>
+				</Tooltip>
+				<Tooltip title='LinkedIn'>
+					<IconButton
+					// href='https://instagram.com/matchmakingnannyservices/'
+					// target='_blank'
+					// referrerPolicy='no-referrer'
+					>
+						<LinkedInIcon className='social' />
+					</IconButton>
+				</Tooltip>
+				<Tooltip title='FaceBook' placement='right-start'>
+					<IconButton
+					// href='https://instagram.com/matchmakingnannyservices/'
+					// target='_blank'
+					// referrerPolicy='no-referrer'
+					>
+						<FacebookIcon className='social' />
 					</IconButton>
 				</Tooltip>
 			</div>
