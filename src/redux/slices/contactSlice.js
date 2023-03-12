@@ -9,7 +9,10 @@ export const sendEmail = createAsyncThunk(
 	'contact/send_email',
 	async (data, { rejectWithValue }) => {
 		try {
-			const res = await axios.post('http://localhost:3005/email', data);
+			const res = await axios.post(
+				'https://mns-backend.onrender.com/email',
+				data
+			);
 			return res.data;
 		} catch (err) {
 			return rejectWithValue(err.response.data);
