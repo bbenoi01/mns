@@ -5,8 +5,16 @@
 		flex-grow: 1;
 		color: #fef6e4;
 
+		span {
+			color: #f582ae;
+		}
+
 		&:hover {
 			color: #f582ae;
+
+			span {
+				color: #fef6e4;
+			}
 		}
 	}
 

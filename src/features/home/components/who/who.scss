@@ -2,7 +2,7 @@
 	background-color: #fef6e4;
 	justify-content: center;
 
-	p {
+	h2 {
 		text-align: center;
 		color: #172c66;
 		font-family: 'Questrial', sans-serif;
@@ -16,22 +16,14 @@
 }
 @media only screen and (min-width: 900px) {
 	#who {
-		p {
+		padding: 40px;
+
+		h2 {
 			font-size: 25px;
 		}
 	}
 }
 @media only screen and (min-width: 1200px) {
-	#who {
-		p {
-			font-size: 30px;
-		}
-	}
 }
 @media only screen and (min-width: 1536px) {
-	#who {
-		p {
-			font-size: 40px;
-		}
-	}
 }
