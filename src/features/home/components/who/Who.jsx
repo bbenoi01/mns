@@ -4,12 +4,12 @@ import './who.scss';
 const Who = () => {
 	return (
 		<section id='who'>
-			<p>
+			<h2>
 				Matchmaking Nanny Services offers top-notch candidates to families in
 				the <span style={{ color: '#f582ae' }}>local San Diego area</span>. We
 				provide a personalized, in home approach, to better assist in the
 				matchmaking process.
-			</p>
+			</h2>
 		</section>
 	);
 };
