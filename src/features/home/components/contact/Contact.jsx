@@ -128,18 +128,18 @@ const Contact = () => {
 				</Tooltip>
 				<Tooltip title='LinkedIn'>
 					<IconButton
-					// href='https://instagram.com/matchmakingnannyservices/'
-					// target='_blank'
-					// referrerPolicy='no-referrer'
+						href='https://www.linkedin.com/in/kristin-rogers-97358b21a/'
+						target='_blank'
+						referrerPolicy='no-referrer'
 					>
 						<LinkedInIcon className='social' />
 					</IconButton>
 				</Tooltip>
 				<Tooltip title='FaceBook' placement='right-start'>
 					<IconButton
-					// href='https://instagram.com/matchmakingnannyservices/'
-					// target='_blank'
-					// referrerPolicy='no-referrer'
+						href='https://www.facebook.com/profile.php?id=100090630715504'
+						target='_blank'
+						referrerPolicy='no-referrer'
 					>
 						<FacebookIcon className='social' />
 					</IconButton>

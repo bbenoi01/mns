@@ -26,18 +26,18 @@ const Footer = () => {
 					</Tooltip>
 					<Tooltip title='LinkedIn' placement='top'>
 						<IconButton
-						// href='https://www.linkedin.com/in/kristin-rogers-97358b21a?trk=people-guest_people_search-card'
-						// target='_blank'
-						// referrerPolicy='no-referrer'
+							href='https://www.linkedin.com/in/kristin-rogers-97358b21a/'
+							target='_blank'
+							referrerPolicy='no-referrer'
 						>
 							<LinkedInIcon className='sub-headline-alt' />
 						</IconButton>
 					</Tooltip>
 					<Tooltip title='FaceBook' placement='right-start'>
 						<IconButton
-						// href='https://www.linkedin.com/in/kristin-rogers-97358b21a?trk=people-guest_people_search-card'
-						// target='_blank'
-						// referrerPolicy='no-referrer'
+							href='https://www.facebook.com/profile.php?id=100090630715504'
+							target='_blank'
+							referrerPolicy='no-referrer'
 						>
 							<FacebookIcon className='sub-headline-alt' />
 						</IconButton>
