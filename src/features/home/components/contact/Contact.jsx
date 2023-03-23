@@ -109,7 +109,7 @@ const Contact = () => {
 					className='link email-link sub-headline'
 					to='mailto:kristin@matchmakingnannyservices.com'
 				>
-					kristen@matchmakingnannyservices.com
+					kristin@matchmakingnannyservices.com
 				</Link>
 			</div>
 			<div className='row contact-row'>

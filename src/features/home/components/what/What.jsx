@@ -19,12 +19,12 @@ const What = () => {
 				<ul>
 					<li>Options for payroll/W-2/contract agreements</li>
 					<li>Reference checks</li>
-					<li>Through background check on selected nanny</li>
+					<li>Thorough background check on selected nanny</li>
 					<li>Access to staff after hours and on weekends</li>
 				</ul>
 			</div>
 			<p className='headline closer'>
-				Whether your child is flourishing, and you have no concerns, or
+				Whether your child is flourishing and you have no concerns, or
 				struggling to hit some of their major milestones, we can help!
 			</p>
 
