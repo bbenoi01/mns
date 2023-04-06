@@ -33,6 +33,12 @@
 
 	li {
 		font-family: 'Questrial', sans-serif;
+		list-style: none;
+		padding: 0 20px;
+		background-image: url('../../../../../public/check-circle.png');
+		background-repeat: no-repeat;
+		background-position: left center;
+		background-size: 15px;
 	}
 
 	.price-card {
