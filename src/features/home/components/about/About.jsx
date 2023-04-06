@@ -11,7 +11,7 @@ const About = () => {
 				<h3 className='headline name'>Kristin Rogers</h3>
 			</div>
 			<div className='list'>
-				<ul id='about-list'>
+				<ul>
 					<li>25 plus years in the field</li>
 					<li>Two teaching credentials</li>
 					<li>Masters degree (education specialist)</li>
