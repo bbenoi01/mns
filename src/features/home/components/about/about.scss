@@ -15,18 +15,30 @@
 		align-self: center;
 	}
 
-	.avatar {
-		width: 125px;
-		height: 125px;
-	}
+	.vitals {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 
-	.name {
-		font-family: 'Petit Formal Script', cursive;
+		.avatar {
+			width: 150px;
+			height: 150px;
+		}
+
+		.name {
+			font-family: 'Petit Formal Script', cursive;
+		}
 	}
 
 	li {
 		color: #172c66;
 		font-family: 'Questrial', sans-serif;
+		list-style: none;
+		padding: 0 20px;
+		background-image: url('../../../../../public/heart-logo.png');
+		background-repeat: no-repeat;
+		background-position: left center;
+		background-size: 15px;
 	}
 
 	.tag {
