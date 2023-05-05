@@ -58,7 +58,7 @@ const Footer = () => {
 						className='link email-link sub-headline-alt'
 						to='mailto:kristin@matchmakingnannyservices.com'
 					>
-						kristen@matchmakingnannyservices.com
+						kristin@matchmakingnannyservices.com
 					</Link>
 				</div>
 			</div>
