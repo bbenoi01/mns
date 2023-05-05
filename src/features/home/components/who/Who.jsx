@@ -5,8 +5,8 @@ const Who = () => {
 	return (
 		<section id='who'>
 			<h2>
-				Matchmaking Nanny Services offers top-notch candidates to families in
-				the <span style={{ color: '#f582ae' }}>local San Diego area</span>. We
+				Matchmaking Nanny Services offers top-notch candidates to families in{' '}
+				<span style={{ color: '#f582ae' }}>Southern California</span>. We
 				provide a personalized, in home approach, to better assist in the
 				matchmaking process.
 			</h2>
